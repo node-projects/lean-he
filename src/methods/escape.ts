@@ -1,5 +1,5 @@
-import {regexEscape} from "../regex/regex-escape";
-import {escapeMap} from "../map/escape-map";
+import {regexEscape} from "../regex/regex.js";
+import {escapeMap} from "../map/escape-map.js";
 
 const escape = function (string) {
 	return string.replace(regexEscape, function ($0) {

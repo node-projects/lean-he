@@ -1,1 +1,0 @@
-export const regexInvalidEntity = /&#(?:[xX][^a-fA-F0-9]|[^0-9xX])/;

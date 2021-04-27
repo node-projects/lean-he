@@ -1,12 +1,11 @@
-import merge from "../utils/merge";
-import parseError from "../utils/parse-error";
-import {regexDecode} from "../regex/regex-decode";
-import {decodeMapNumeric} from "../map/decode-map-numeric";
-import {invalidReferenceCodePoints} from "../utils/invalid-reference-code-points";
-import contains from "../utils/constains";
-import {decodeMap} from "../map/decode-map";
-import {decodeMapLegacy} from "../map/decode-map-legacy";
-import {regexInvalidEntity} from "../regex/regex-invalid-entry";
+import merge from "../utils/merge.js";
+import parseError from "../utils/parse-error.js";
+import {regexDecode, regexInvalidEntity} from "../regex/regex.js";
+import {decodeMapNumeric} from "../map/decode-map-numeric.js";
+import {invalidReferenceCodePoints} from "../utils/invalid-reference-code-points.js";
+import contains from "../utils/constains.js";
+import {decodeMap} from "../map/decode-map.js";
+import {decodeMapLegacy} from "../map/decode-map-legacy.js";
 
 
 function codePointToSymbol(codePoint, strict) {

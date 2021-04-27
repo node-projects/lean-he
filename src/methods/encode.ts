@@ -1,12 +1,7 @@
-import merge from "../utils/merge";
-import parseError from "../utils/parse-error";
-import {regexAsciiWhitelist} from "../regex/regex-ascii-whitelist";
-import {regexInvalidRawCodePoint} from "../regex/regex-invalid-raw-code-point";
-import {encodeMap} from "../map/encode-map";
-import {regexEncodeNonAscii} from "../regex/regex-encode-non-ascii";
-import {regexEscape} from "../regex/regex-escape";
-import {regexAstralSymbols} from "../regex/regex-astral-symbols";
-import {regexBmpWhitelist} from "../regex/regex-bmp-whitelist";
+import merge from "../utils/merge.js";
+import parseError from "../utils/parse-error.js";
+import { regexAsciiWhitelist, regexInvalidRawCodePoint, regexEncodeNonAscii, regexEscape, regexAstralSymbols, regexBmpWhitelist } from "../regex/regex.js";
+import { encodeMap } from "../map/encode-map.js";
 
 function hexEscape(codePoint) {
 	return `&#x${codePoint.toString(16).toUpperCase()};`;
@@ -81,7 +76,7 @@ const encode = function (string, options) {
 		string = string.replace(regexEscape, escapeBmpSymbol);
 	}
 	return string
-	// Encode astral symbols.
+		// Encode astral symbols.
 		.replace(regexAstralSymbols, function ($0) {
 			// https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
 			const high = $0.charCodeAt(0);

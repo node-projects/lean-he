@@ -1,1 +1,0 @@
-export const regexAsciiWhitelist = /[\x01-\x7F]/g;

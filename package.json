@@ -1,9 +1,9 @@
 {
-  "name": "lean-he",
-  "version": "2.1.2",
+  "name": "@node-projects/lean-he-esm",
+  "version": "3.0.0",
   "description": "A robust HTML entities encoder/decoder with full Unicode support.",
-  "homepage": "https://github.com/adnaan1703/lean-he",
-  "main": "lean-he.js",
+  "homepage": "https://github.com/node-projects/lean-he",
+  "main": "lean-he-esm.js",
   "keywords": [
     "string",
     "entities",
@@ -22,18 +22,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adnaan1703/lean-he"
+    "url": "https://github.com/node-projects/lean-he"
   },
-  "bugs": "https://github.com/adnaan1703/lean-he/issues",
+  "bugs": "https://github.com/node-projects/lean-he/issues",
   "scripts": {
     "test": "jest && npm run codecov",
     "codecov": "codecov -f coverage/coverage-final.json",
-    "build": "babel src -d lib"
+    "tsc": "tsc"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "codecov": "^3.1.0",
-    "jest": "^23.5.0"
+    "codecov": "^3.8.1",
+    "jest": "^26.6.3",
+    "typescript": "^4.2.4"
   }
 }
