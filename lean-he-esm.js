@@ -1,3 +1,3 @@
-export * as encode from './encode.js'
-export * as decode from './decode.js'
-export * as escape from './escape.js'
+export { encode } from './lib/methods/encode.js'
+export { decode } from './lib/methods/decode.js'
+export { escape } from './lib/methods/escape.js'

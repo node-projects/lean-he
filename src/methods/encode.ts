@@ -11,7 +11,7 @@ function decEscape(codePoint) {
 	return `&#${codePoint};`;
 }
 
-const encode = function (string, options) {
+export const encode = function (string, options) {
 	options = merge(options, encode.options);
 	const strict = options.strict;
 	if (strict && regexInvalidRawCodePoint.test(string)) {
@@ -96,5 +96,3 @@ encode.options = {
 	'useNamedReferences': false,
 	'decimal': false
 };
-
-export default encode;

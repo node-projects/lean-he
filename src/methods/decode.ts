@@ -40,7 +40,7 @@ function codePointToSymbol(codePoint, strict) {
 }
 
 
-const decode = function (html, options) {
+export const decode = function (html, options) {
 	options = merge(options, decode.options);
 	const strict = options.strict;
 	if (strict && regexInvalidEntity.test(html)) {
@@ -116,5 +116,3 @@ decode.options = {
 	'isAttributeValue': false,
 	'strict': false
 };
-
-export default decode;
