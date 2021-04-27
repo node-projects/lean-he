@@ -1,12 +1,16 @@
 import merge from "../utils/merge.js";
 import parseError from "../utils/parse-error.js";
-import {regexDecode, regexInvalidEntity} from "../regex/regex.js";
-import {decodeMapNumeric} from "../map/decode-map-numeric.js";
-import {invalidReferenceCodePoints} from "../utils/invalid-reference-code-points.js";
+import { regexDecode, regexInvalidEntity } from "../regex/regex.js";
+import { decodeMapNumeric } from "../map/decode-map-numeric.js";
+import { invalidReferenceCodePoints } from "../utils/invalid-reference-code-points.js";
 import contains from "../utils/constains.js";
-import {decodeMap} from "../map/decode-map.js";
-import {decodeMapLegacy} from "../map/decode-map-legacy.js";
+import { decodeMap } from "../map/decode-map.js";
+import { decodeMapLegacy } from "../map/decode-map-legacy.js";
 
+export type optionsType = {
+	isAttributeValue: boolean,
+	strict: boolean
+};
 
 function codePointToSymbol(codePoint, strict) {
 	let output = '';
@@ -40,7 +44,7 @@ function codePointToSymbol(codePoint, strict) {
 }
 
 
-export const decode = function (html, options) {
+export const decode = function (html, options?: optionsType) {
 	options = merge(options, decode.options);
 	const strict = options.strict;
 	if (strict && regexInvalidEntity.test(html)) {

@@ -3,6 +3,14 @@ import parseError from "../utils/parse-error.js";
 import { regexAsciiWhitelist, regexInvalidRawCodePoint, regexEncodeNonAscii, regexEscape, regexAstralSymbols, regexBmpWhitelist } from "../regex/regex.js";
 import { encodeMap } from "../map/encode-map.js";
 
+export type optionsType = {
+	allowUnsafeSymbols: boolean,
+	encodeEverything: boolean,
+	strict: boolean,
+	useNamedReferences: boolean,
+	decimal: boolean
+};
+
 function hexEscape(codePoint) {
 	return `&#x${codePoint.toString(16).toUpperCase()};`;
 }
@@ -11,7 +19,7 @@ function decEscape(codePoint) {
 	return `&#${codePoint};`;
 }
 
-export const encode = function (string, options) {
+export const encode = function (string, options?: optionsType) {
 	options = merge(options, encode.options);
 	const strict = options.strict;
 	if (strict && regexInvalidRawCodePoint.test(string)) {

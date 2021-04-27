@@ -1,6 +1,6 @@
 {
   "name": "@node-projects/lean-he-esm",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "A robust HTML entities encoder/decoder with full Unicode support.",
   "homepage": "https://github.com/node-projects/lean-he",
   "main": "lean-he-esm.js",
