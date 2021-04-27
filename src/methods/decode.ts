@@ -44,7 +44,7 @@ function codePointToSymbol(codePoint, strict) {
 }
 
 
-export const decode = function (html, options?: optionsType) {
+export const decode = function (html: string, options?: optionsType): string {
 	options = merge(options, decode.options);
 	const strict = options.strict;
 	if (strict && regexInvalidEntity.test(html)) {

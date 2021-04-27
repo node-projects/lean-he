@@ -19,7 +19,7 @@ function decEscape(codePoint) {
 	return `&#${codePoint};`;
 }
 
-export const encode = function (string, options?: optionsType) {
+export const encode = function (string: string, options?: optionsType): string {
 	options = merge(options, encode.options);
 	const strict = options.strict;
 	if (strict && regexInvalidRawCodePoint.test(string)) {
