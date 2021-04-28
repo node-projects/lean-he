@@ -1,6 +1,7 @@
 # lean-he-esm
 
-it is forked from lean-he and converted to typescript.
+it is forked from lean-he and converted to typescript and es6 imports.
+look for @node-projects/lean-he-esm in npm
 
 # lean-he [![codecov](https://codecov.io/gh/adnaan1703/lean-he/branch/master/graph/badge.svg)](https://codecov.io/gh/adnaan1703/lean-he) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)
 
