@@ -1,7 +1,7 @@
-export * from './map/decode-map-legacy';
+export * from './map/decode-map-legacy.js';
 export * from './map/decode-map-numeric.js';
 export * from './map/decode-map.js';
-export * from './map/encode-map';
+export * from './map/encode-map.js';
 export * from './map/escape-map.js';
 export { optionsType as decodeOptionsType, decode } from './methods/decode.js';
 export { optionsType as encodeOptionsType, encode } from './methods/encode.js';
