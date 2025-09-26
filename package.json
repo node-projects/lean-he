@@ -1,9 +1,9 @@
 {
   "name": "@node-projects/lean-he-esm",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "A robust HTML entities encoder/decoder with full Unicode support.",
   "homepage": "https://github.com/node-projects/lean-he",
-  "main": "lean-he-esm.js",
+  "main": "./lib/index.js",
   "type": "module",
   "keywords": [
     "string",
@@ -29,11 +29,15 @@
   "scripts": {
     "test": "jest && npm run codecov",
     "codecov": "codecov -f coverage/coverage-final.json",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "prepublishOnly": "npm run tsc && npm run bundle",
+    "bundle": "esbuild ./lib/index.js --format=esm --minify --platform=neutral --bundle --outfile=./lib/index-min.js"
+  
   },
   "devDependencies": {
     "codecov": "^3.8.1",
     "jest": "^26.6.3",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "esbuild": "^0.25.10"
   }
 }

@@ -1,0 +1,13 @@
+export * from './map/decode-map-legacy';
+export * from './map/decode-map-numeric.js';
+export * from './map/decode-map.js';
+export * from './map/encode-map';
+export * from './map/escape-map.js';
+export { optionsType as decodeOptionsType, decode } from './methods/decode.js';
+export { optionsType as encodeOptionsType, encode } from './methods/encode.js';
+export * from './methods/escape.js';
+export * from './regex/regex.js';
+export * from './utils/constains.js';
+export * from './utils/invalid-reference-code-points.js';
+export * from './utils/merge.js';
+export * from './utils/parse-error.js';
